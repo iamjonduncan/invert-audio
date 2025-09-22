@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Base ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden; /* prevent horizontal scrollbars */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* ===== Sections ===== */
+.section.full {
+  min-height: 100vh;  /* at least fills one screen */
+  height: auto;       /* grows if content is taller */
+}
+
+
+section {
+  min-height: 1vh; /* always exists */
+  width: 100%;
+  display: block;
+}
+
+/* Containers */
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== Splash ===== */
+.blue_bg {
+  width: 100%;
+  background-color: #2985d1;
+  padding: 6rem 2rem;      /* breathing space around contents */
+  display: block;          /* normal block flow */
+}
+
+.splash_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;        /* splash fills most of the first screen */
+  margin-bottom: 4rem;     /* spacing before client logos */
+}
+
+
+
+.splash-logo {
+  text-align: center;
+  font-weight: 700;
+  transform: rotate(180deg);
+  font-size: clamp(2rem, 14vw, 18rem);
+}
+
+
+.splash_about {
+  margin-top: -2rem;   /* or whatever looks good */
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: 14vw; line-height: 1.2em; color: #ef5b5b; font-style: italic;}
+h2 { font-size: clamp(25px, 2.5vw, 60px);; line-height: 1.2em; font-style: italic; }
+h3 { font-size: 7vw; line-height: 1.2em; font-style: italic; }
+h4 { font-size: clamp(25px, 3vw, 80px);; line-height: 1.2em; font-style: italic; }
+h5 { font-size: 14px; line-height: 20px; }
+h6 { font-size: 12px; line-height: 18px; }
+
+p { margin: 0 0 10px; }
+
+.tagline {
+  color: #e8d6ba;
+}
+
+/* ===== Client Logos ===== */
+.client-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;          /* centers logos */
+  justify-items: center;
+  align-items: center;
+}
+
+.client-logo {
+  max-width: 160px;
+  max-height: 90px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(94%) sepia(7%)
+          saturate(925%) hue-rotate(334deg) brightness(95%) contrast(87%);
+}
+
+/* ===== Advertisements ===== */
+.ads-section {
+  background-color: #ef5b5b;
+	padding: 8rem 0;
+}
+
+.ads-section h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.video_container {
+  margin-bottom: 3rem;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video_info {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.video_info h3,
+.video_info p {
+  color: #fff;
+  margin: 0.5rem 0 0;
+  font-size: clamp(16px, 1vw, 72px);
+}
+
+/* ===== Television ===== */
+.television-section {
+  background-color: #2985d1;
+  color: #fff;
+	padding: 8rem 0;
+}
+
+.television-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.tv-thumb {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  overflow: hidden;
+  background: #000;
+}
+
+.tv-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.tv-thumb:hover img {
+  transform: scale(1.03);
+}
+
+/* ===== Shared Show Grid (Film/Podcasts) ===== */
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.show-thumb {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  overflow: hidden;
+  background: #000;
+}
+
+.show-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.show-thumb:hover img {
+  transform: scale(1.03);
+}
+
+.orange_bg {
+	background-color: #ef5b5b;
+}
+
+.orange_txt {
+  color:#ef5b5b !important;
+}
+
+.white_bg {
+	background-color: #e8d6ba;
+}
+
+.white_text {
+  color: #e8d6ba;
+}
+
+.film-section, .podcast-section {
+	padding:8rem 0;
+}
+
+/* ===== Sticky Nav ===== */
+.site-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 1000; /* keeps it above content */
+}
+
+.nav-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+  background-color: #333;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #ef5b5b; /* highlight on hover */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .television-grid { grid-template-columns: repeat(4, 1fr); }
+  .shows-grid { grid-template-columns: repeat(3, 1fr); }
+  .client-logos-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .television-grid { grid-template-columns: repeat(3, 1fr); }
+  .shows-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .blue_bg {
+    min-height: 0; /* removes the forced viewport height */
+  }
+}
+
+@media (max-width: 680px) {
+  .television-grid { grid-template-columns: repeat(3, 1fr); }
+  img {width: 100%;}
+}
+
+@media (max-width: 600px) {
+  .shows-grid,
+  .client-logos-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 420px) {
+  .television-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ===== Fonts ===== */
+@font-face {
+  font-family: 'Migra';
+  src: url('fonts/Migra-Extrabold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Migra';
+  src: url('fonts/Migra-Extralight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
