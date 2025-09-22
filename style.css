@@ -26,8 +26,7 @@ html, body {
 
 /* ===== Sections ===== */
 .section.full {
-  min-height: 100vh;  /* at least fills one screen */
-  height: auto;       /* grows if content is taller */
+  height: 100vh; /* forces full viewport height */
 }
 
 
@@ -45,19 +44,19 @@ section {
 
 /* ===== Splash ===== */
 .blue_bg {
+  display: flex;              /* center children */
+  flex-direction: column;
+  justify-content: center;    /* centers vertically */
+  align-items: center;        /* centers horizontally */
+  height: 100%;               /* takes the full height of .section.full */
   width: 100%;
   background-color: #2985d1;
-  padding: 6rem 2rem;      /* breathing space around contents */
-  display: block;          /* normal block flow */
+  padding: 2rem;              /* optional spacing */
 }
 
 .splash_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;        /* splash fills most of the first screen */
-  margin-bottom: 4rem;     /* spacing before client logos */
+  /* remove min-height completely */
+  padding: 0;                 /* keep only spacing if needed */
 }
 
 
@@ -74,6 +73,8 @@ section {
   margin-top: -2rem;   /* or whatever looks good */
   position: relative;
   z-index: 1;
+  text-align: center;
+  margin-bottom: 10rem;
 }
 
 
@@ -300,20 +301,4 @@ p { margin: 0 0 10px; }
 
 @media (max-width: 420px) {
   .television-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* ===== Fonts ===== */
-@font-face {
-  font-family: 'Migra';
-  src: url('fonts/Migra-Extrabold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Migra';
-  src: url('fonts/Migra-Extralight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
 }
