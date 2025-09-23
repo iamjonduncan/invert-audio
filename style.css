@@ -26,9 +26,24 @@ html, body {
 
 /* ===== Sections ===== */
 .section.full {
-  height: 100vh; /* forces full viewport height */
+  min-height: 100vh;
 }
 
+.section.full.blue {
+  background-color: #2985d1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #fff;
+}
+
+.blue {
+  background-color: #2985d1;
+  color: #fff;
+}
 
 section {
   min-height: 1vh; /* always exists */
