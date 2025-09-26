@@ -136,9 +136,7 @@ p { margin: 0 0 10px; }
 /* ===== Advertisements ===== */
 
 .promo-section {
-  border: 10px solid lime !important;
   background: #ef5b5b !important;
-  min-height: 200px !important;
 }
 
 .promo-section h3 {
