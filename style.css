@@ -135,13 +135,13 @@ p { margin: 0 0 10px; }
 
 /* ===== Advertisements ===== */
 
-.ads-section {
+.promo-section {
   border: 10px solid lime !important;
   background: #ef5b5b !important;
   min-height: 200px !important;
 }
 
-.ads-section h3 {
+.promo-section h3 {
   color: #fff;
   margin-bottom: 2rem;
 }
