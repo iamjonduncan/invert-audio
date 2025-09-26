@@ -134,9 +134,11 @@ p { margin: 0 0 10px; }
 }
 
 /* ===== Advertisements ===== */
+
 .ads-section {
-  background-color: #ef5b5b;
-	padding: 8rem 0;
+  border: 10px solid lime !important;
+  background: #ef5b5b !important;
+  min-height: 200px !important;
 }
 
 .ads-section h3 {
