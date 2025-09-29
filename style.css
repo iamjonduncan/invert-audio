@@ -137,13 +137,13 @@ p { margin: 0 0 10px; }
 
 .promo-section {
   background: #ef5b5b !important;
+  padding: 8rem 0;
 }
 
 .promo-section h3 {
   color: #fff;
   margin-bottom: 2rem;
   margin-top: 0;
-  padding-top: 2rem;
 }
 
 .video_container {
